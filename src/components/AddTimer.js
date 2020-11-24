@@ -4,7 +4,8 @@ import { useDispatch } from 'react-redux';
 import { addTimer } from '../actions';
 
 export default function AddTimer() {
-	const [ name, setName ] = useState('')
+	const [ name, setName ] = useState('');
+    const dispatch = useDispatch();
 	return (
 		<div>
             <input
