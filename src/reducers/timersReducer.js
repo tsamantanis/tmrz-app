@@ -1,4 +1,4 @@
-import { ADD_TIMER, TOGGLE_TIMER, DELETE_TIMER, UPDATE } from '../actions';
+import { ADD_TIMER, TOGGLE_TIMER, RESET_TIMER, DELETE_TIMER, UPDATE } from '../actions';
 import Timer from '../components/Timer';
 
 const timersReducer = (state = [], action) => {
@@ -23,6 +23,14 @@ const timersReducer = (state = [], action) => {
                 return timer;
             })
             return newState;
+        case RESET_TIMER:
+            const resetState = state.map((timer, index) => {
+                if (action.payload.index === index) {
+                    return {...timer, time: 0}
+                }
+                return timer;
+            })
+            return resetState;
         default:
             return state;
     }
