@@ -1,9 +1,16 @@
 export const ADD_TIMER = 'ADD_TIMER';
-
 export const addTimer = (name) => {
     return {
         type: ADD_TIMER,
         payload: { name }
+    }
+}
+
+export const DELETE_TIMER = 'DELETE_TIMER';
+export const deleteTimer = (index) => {
+    return {
+        type: DELETE_TIMER,
+        payload: { index }
     }
 }
 

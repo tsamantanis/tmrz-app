@@ -21,13 +21,26 @@
 	flex: 1;
 }
 
-.TimerView > button {
-	padding: 0.5rem 0.75rem;
+.TimerView .Actions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.TimerView .Actions > button {
+	padding: 0.75rem;
 	border-radius: 0.5rem;
 	border: 1px solid #000;
 	background-color: #000;
 	color: #fff;
 	font-size: 1rem;
 	font-weight: bold;
-	width: 4rem;
+	margin: 1rem;
+}
+
+.TimerView .Actions > button:hover {
+	cursor: pointer;
+	background: #444;
+	border: 1px solid #444;
 }
